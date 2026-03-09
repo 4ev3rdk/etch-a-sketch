@@ -1,0 +1,33 @@
+.main {
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#gridNo {
+    margin-top: 40px;
+    width: 70px;
+    height: 30px;
+
+}
+
+#container-grid {
+    margin: auto;
+    margin-top: 20px;
+    height: 960px;
+    width: 960px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.square {
+    /* height: 60px;
+    width: 60px; */
+    box-sizing: border-box;
+    border: 1px solid red;
+    display: inline-block;
+
+}
