@@ -5,17 +5,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etch-a-Sketch</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Special+Elite&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <script defer src="./javascript.js">
+
     </script>
 </head>
 
 <body>
+    <div id="header">Etch-a-Sketch</div>
+
+
     <div class="main">
+
         <button id="gridNo">Grids</button>
-        Pick Color <input type="color" id="colorPicker">
-        <button id="random">Random Colors</button>
-        <div id="container-grid"></div>
+        <div id="hero">
+            <div class="left">
+                <div class="label">
+                    <label for="colorPicker">Choose Color: </label>
+                    <input type="color" id="colorPicker">
+                </div>
+                <button id="random">Random Colors</button>
+                <button id="eraser">Eraser</button>
+            </div>
+            <div class="right">
+                <div id="container-grid"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        Copyright © 4ev3rdk <a href="https:github.com/4ev3rdk" targer="_blank"> <img id="github-logo"
+                src="./github.svg"></a>
     </div>
 </body>
 

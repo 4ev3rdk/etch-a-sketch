@@ -2,14 +2,14 @@
 
 const container_grid = document.querySelector("#container-grid");
 let no = 16;
-function createGrid() {
+function createGrid(b) {
     for (let i = 0; i < no * no; i++) {
 
         const square = document.createElement("div");
         square.classList.add("square");
         container_grid.append(square);
 
-        let size = 960 / no;
+        let size = 500 / no;
         square.style.height = size + "px";
         square.style.width = size + "px";
 
@@ -28,22 +28,34 @@ colorPicker.addEventListener("input", () => {
 });
 
 //mouseover and color
+
 const squareColor = document.querySelectorAll(".square");
 function changeColor() {
+
+    // if (!mouseDown) {
+    //     return;
+    // }
+
     // let random = randomColor();
     if (color === "random") {
         this.style.background = randomColor();
     }
+    // else if(color==="white")
     else {
         this.style.background = color;
 
     }
+
+
     // let current = Number(this.style.opacity);
     // this.style.opacity = current + 0.1;
 }
 
 for (let square of squareColor) {
+
     square.addEventListener("mouseover", changeColor);
+    // square.addEventListener("mouseDown", changeColor)
+
 
 }
 
@@ -78,7 +90,8 @@ function changeGrid() {
 
         container_grid.append(square);
         square.addEventListener("mouseover", changeColor);
-        let size = 960 / no;
+        // square.addEventListener("touchmove", changeColor);   
+        let size = 500 / no;
         square.style.height = size + "px";
         square.style.width = size + "px";
     }
@@ -95,4 +108,16 @@ const randomclr = document.querySelector("#random");
 randomclr.addEventListener("click", () => {
     color = "random";
 });
+
+const eraser = document.querySelector("#eraser");
+
+eraser.addEventListener("click", () => color = "white");
+
+let mouseDown = false;
+
+
+// document.addEventListener("mousedown", () => mouseDown = true);
+// document.addEventListener("mouseup", () => mouseDown = false);
+
+
 
